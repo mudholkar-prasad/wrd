@@ -194,17 +194,14 @@ public class WaterIrrigation {
 						
 										lblSrn.setText(String.valueOf(srn));
 										
-										Thread.sleep(200);
-										/*Select Block*/
-										//String xlsBlc = sht.getRow(0).getCell(2).getStringCellValue();
-										//WebElement blc = driver.findElement(By.id("edit-ddl-block"));
-										Select sltBlc = new Select(driver.findElement(By.id("edit-ddl-block")));
+										/*Select Block*/										
+										WebElement blc = driver.findElement(By.id("edit-ddl-block"));
+										Select sltBlc = new Select(blc);
 										sltBlc.selectByVisibleText(txtBlock.getText());
 										
-										Thread.sleep(500);
+										Thread.sleep(100);
 										
-										/*Select Village*/
-										//String xlsVlg = sht.getRow(0).getCell(3).getStringCellValue();
+										/*Select Village*/										
 										WebElement vlg = driver.findElement(By.id("ddl-village"));
 										Select sltVlg = new Select(vlg);
 										sltVlg.selectByVisibleText(txtVillage.getText());
@@ -217,9 +214,8 @@ public class WaterIrrigation {
 										/*Serial No. Entry*/
 										double srn_no = sht.getRow(srn).getCell(0).getNumericCellValue();
 										driver.findElement(By.id("edit-field-gw-serial-no-und-0-value")).sendKeys(String.valueOf((int)srn_no));
-										//System.out.println(String.valueOf((int)srn_no));
-										
-										Thread.sleep(200);
+																				
+										Thread.sleep(100);
 										/*Select Type*/
 										double _2 = sht.getRow(srn).getCell(1).getNumericCellValue();
 										WebElement typeE = driver.findElement(By.id("edit-field-gw-2-type-und")); 
@@ -463,7 +459,7 @@ public class WaterIrrigation {
 													driver.findElement(By.id("edit-field-gw-38-total-und-0-value")).sendKeys(_38);
 												}
 												
-												else if((int)_2 == 1){
+												else if((int)_21 == 1){
 												
 												String _27 = sht.getRow(srn).getCell(34).getStringCellValue();
 												driver.findElement(By.id("edit-field-gw-27-kharif-und-0-value")).sendKeys(_27);
@@ -483,28 +479,43 @@ public class WaterIrrigation {
 												String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
 												if(_32.equals("Y")){
 													_32 = "1";
+													
+													/* 32 */
+													WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+													Select slt32 = new Select(elm32);
+													slt32.selectByValue(_32);
+													
+													/* _39i */												
+													WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
+													Select slt39i = new Select(elm39i);
+													slt39i.selectByValue("1");
+														
 												}
 												else if(_32.equals("N")){
 													_32 = "2";
-												}
+													
+													/* 32 */
+													WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+													Select slt32 = new Select(elm32);
+													slt32.selectByValue(_32);
+													
+													/* 33 */
+													String _33 = sht.getRow(srn).getCell(40).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-33-maximum-potential-und-0-value")).sendKeys(_33);
+													
+													/* 39i */
+													WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
+													Select slt39i = new Select(elm39i);
+													slt39i.selectByValue("1");
+													
+													/* 39ii */
+													WebElement elm39ii = driver.findElement(By.id("edit-field-gw-reason-under-utilizatio-und"));
+													Select slt39ii = new Select(elm39ii);
+													slt39ii.selectByValue("5");
+												}										
 												
-												WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
-												Select slt32 = new Select(elm32);
-												slt32.selectByValue(_32);
 												
-												}							
-												
-												/* _39i */
-												//String _39i = sht.getRow(srn).getCell(62).getStringCellValue();
-												WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
-												Select slt39i = new Select(elm39i);
-												slt39i.selectByValue("1");
-												
-												/* _39ii */
-												String _39ii = sht.getRow(srn).getCell(46).getStringCellValue();
-												WebElement elm39ii = driver.findElement(By.id("edit-field-gw-reason-under-utilizatio-und"));
-												Select slt39ii = new Select(elm39ii);
-												slt39ii.selectByIndex(Integer.parseInt(_39ii));
+												}												
 																								
 												/* Remarks */
 												driver.findElement(By.id("edit-field-gw-remarks-und-0-value")).sendKeys("NIL");
@@ -512,15 +523,14 @@ public class WaterIrrigation {
 												/* Submit Form */
 												driver.findElement(By.id("edit-submit")).click();
 												
-												//Thread.sleep(500);
+												/* Accept Alert */
+												driver.switchTo().alert().accept();
+												
+												Thread.sleep(100);
 												
 												driver.switchTo().alert().accept();
 												
 												Thread.sleep(200);
-												
-												driver.switchTo().alert().accept();
-												
-												Thread.sleep(500);
 												
 											}else if((String.valueOf((int)_11a)).equals("2"))
 											{
@@ -636,7 +646,7 @@ public class WaterIrrigation {
 													driver.findElement(By.id("edit-field-gw-38-total-und-0-value")).sendKeys(_38);
 												}
 												
-												else if((int)_2 == 1){
+												else if((int)_21 == 1){
 												
 												String _27 = sht.getRow(srn).getCell(34).getStringCellValue();
 												driver.findElement(By.id("edit-field-gw-27-kharif-und-0-value")).sendKeys(_27);
@@ -656,44 +666,58 @@ public class WaterIrrigation {
 												String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
 												if(_32.equals("Y")){
 													_32 = "1";
+													
+													/* 32 */
+													WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+													Select slt32 = new Select(elm32);
+													slt32.selectByValue(_32);
+													
+													/* _39i */												
+													WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
+													Select slt39i = new Select(elm39i);
+													slt39i.selectByValue("1");
+														
 												}
 												else if(_32.equals("N")){
 													_32 = "2";
-												}
+													
+													/* 32 */
+													WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+													Select slt32 = new Select(elm32);
+													slt32.selectByValue(_32);
+													
+													/* 33 */
+													String _33 = sht.getRow(srn).getCell(40).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-33-maximum-potential-und-0-value")).sendKeys(_33);
+													
+													/* 39i */
+													WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
+													Select slt39i = new Select(elm39i);
+													slt39i.selectByValue("1");
+													
+													/* 39ii */
+													WebElement elm39ii = driver.findElement(By.id("edit-field-gw-reason-under-utilizatio-und"));
+													Select slt39ii = new Select(elm39ii);
+													slt39ii.selectByValue("5");
+												}										
 												
-												WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
-												Select slt32 = new Select(elm32);
-												slt32.selectByValue(_32);
 												
-												}							
-												
-												/* _39i */
-												//String _39i = sht.getRow(srn).getCell(62).getStringCellValue();
-												WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
-												Select slt39i = new Select(elm39i);
-												slt39i.selectByValue("1");
-												
-												/* _39ii */
-												String _39ii = sht.getRow(srn).getCell(46).getStringCellValue();
-												WebElement elm39ii = driver.findElement(By.id("edit-field-gw-reason-under-utilizatio-und"));
-												Select slt39ii = new Select(elm39ii);
-												slt39ii.selectByIndex(Integer.parseInt(_39ii));
-												
+												}												
+																								
 												/* Remarks */
 												driver.findElement(By.id("edit-field-gw-remarks-und-0-value")).sendKeys("NIL");
 												
 												/* Submit Form */
 												driver.findElement(By.id("edit-submit")).click();
 												
-												//Thread.sleep(500);
+												/* Accept Alert */
+												driver.switchTo().alert().accept();
+												
+												Thread.sleep(100);
 												
 												driver.switchTo().alert().accept();
 												
 												Thread.sleep(200);
-												
-												driver.switchTo().alert().accept();
-												
-												Thread.sleep(500);
 											
 											}else if((String.valueOf((int)_11a)).equals("3"))
 											{
@@ -894,7 +918,7 @@ public class WaterIrrigation {
 												
 												String _26 = sht.getRow(srn).getCell(33).getStringCellValue();
 												driver.findElement(By.id("edit-field-gw-26-total-und-0-value")).sendKeys(_26);
-																			
+												
 												if((int)_21 == 2){
 													
 													String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
@@ -929,7 +953,7 @@ public class WaterIrrigation {
 													driver.findElement(By.id("edit-field-gw-38-total-und-0-value")).sendKeys(_38);
 												}
 												
-												else if((int)_2 != 2){
+												else if((int)_21 == 1){
 												
 												String _27 = sht.getRow(srn).getCell(34).getStringCellValue();
 												driver.findElement(By.id("edit-field-gw-27-kharif-und-0-value")).sendKeys(_27);
@@ -949,43 +973,59 @@ public class WaterIrrigation {
 												String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
 												if(_32.equals("Y")){
 													_32 = "1";
+													
+													/* 32 */
+													WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+													Select slt32 = new Select(elm32);
+													slt32.selectByValue(_32);
+													
+													/* _39i */												
+													WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
+													Select slt39i = new Select(elm39i);
+													slt39i.selectByValue("1");
+														
 												}
 												else if(_32.equals("N")){
 													_32 = "2";
-												}
-												WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
-												Select slt32 = new Select(elm32);
-												slt32.selectByValue(_32);							
-												}					
-					
-												/* _39i */
-												//String _39i = sht.getRow(srn).getCell(62).getStringCellValue();
-												WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
-												Select slt39i = new Select(elm39i);
-												slt39i.selectByValue("1");
+													
+													/* 32 */
+													WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+													Select slt32 = new Select(elm32);
+													slt32.selectByValue(_32);
+													
+													/* 33 */
+													String _33 = sht.getRow(srn).getCell(40).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-33-maximum-potential-und-0-value")).sendKeys(_33);
+													
+													/* 39i */
+													WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
+													Select slt39i = new Select(elm39i);
+													slt39i.selectByValue("1");
+													
+													/* 39ii */
+													WebElement elm39ii = driver.findElement(By.id("edit-field-gw-reason-under-utilizatio-und"));
+													Select slt39ii = new Select(elm39ii);
+													slt39ii.selectByValue("5");
+												}										
 												
-												/* _39ii */
-												String _39ii = sht.getRow(srn).getCell(46).getStringCellValue();
-												WebElement elm39ii = driver.findElement(By.id("edit-field-gw-reason-under-utilizatio-und"));
-												Select slt39ii = new Select(elm39ii);
-												slt39ii.selectByIndex(Integer.parseInt(_39ii));
 												
+												}												
+																								
 												/* Remarks */
 												driver.findElement(By.id("edit-field-gw-remarks-und-0-value")).sendKeys("NIL");
 												
 												/* Submit Form */
 												driver.findElement(By.id("edit-submit")).click();
 												
-												//Thread.sleep(500);
+												/* Accept Alert */
+												driver.switchTo().alert().accept();
+												
+												Thread.sleep(100);
 												
 												driver.switchTo().alert().accept();
 												
 												Thread.sleep(200);
-												
-												driver.switchTo().alert().accept();
-												
-												Thread.sleep(500);
-												
+											
 											}else if((String.valueOf((int)_11a)).equals("2"))
 											{
 												WebElement elm11a = driver.findElement(By.id("edit-field-gw-11-a-und"));
@@ -1100,7 +1140,7 @@ public class WaterIrrigation {
 													driver.findElement(By.id("edit-field-gw-38-total-und-0-value")).sendKeys(_38);
 												}
 												
-												else if((int)_2 == 1){
+												else if((int)_21 == 1){
 												
 												String _27 = sht.getRow(srn).getCell(34).getStringCellValue();
 												driver.findElement(By.id("edit-field-gw-27-kharif-und-0-value")).sendKeys(_27);
@@ -1120,44 +1160,59 @@ public class WaterIrrigation {
 												String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
 												if(_32.equals("Y")){
 													_32 = "1";
+													
+													/* 32 */
+													WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+													Select slt32 = new Select(elm32);
+													slt32.selectByValue(_32);
+													
+													/* _39i */												
+													WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
+													Select slt39i = new Select(elm39i);
+													slt39i.selectByValue("1");
+														
 												}
 												else if(_32.equals("N")){
 													_32 = "2";
-												}
+													
+													/* 32 */
+													WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+													Select slt32 = new Select(elm32);
+													slt32.selectByValue(_32);
+													
+													/* 33 */
+													String _33 = sht.getRow(srn).getCell(40).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-33-maximum-potential-und-0-value")).sendKeys(_33);
+													
+													/* 39i */
+													WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
+													Select slt39i = new Select(elm39i);
+													slt39i.selectByValue("1");
+													
+													/* 39ii */
+													WebElement elm39ii = driver.findElement(By.id("edit-field-gw-reason-under-utilizatio-und"));
+													Select slt39ii = new Select(elm39ii);
+													slt39ii.selectByValue("5");
+												}										
 												
-												WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
-												Select slt32 = new Select(elm32);
-												slt32.selectByValue(_32);
 												
-												}							
-												
-												/* _39i */
-												//String _39i = sht.getRow(srn).getCell(62).getStringCellValue();
-												WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
-												Select slt39i = new Select(elm39i);
-												slt39i.selectByValue("1");
-												
-												/* _39ii */
-												String _39ii = sht.getRow(srn).getCell(46).getStringCellValue();
-												WebElement elm39ii = driver.findElement(By.id("edit-field-gw-reason-under-utilizatio-und"));
-												Select slt39ii = new Select(elm39ii);
-												slt39ii.selectByIndex(Integer.parseInt(_39ii));
-												
+												}												
+																								
 												/* Remarks */
 												driver.findElement(By.id("edit-field-gw-remarks-und-0-value")).sendKeys("NIL");
 												
 												/* Submit Form */
 												driver.findElement(By.id("edit-submit")).click();
 												
-												//Thread.sleep(500);
+												/* Accept Alert */
+												driver.switchTo().alert().accept();
+												
+												Thread.sleep(100);
 												
 												driver.switchTo().alert().accept();
 												
 												Thread.sleep(200);
 												
-												driver.switchTo().alert().accept();
-												
-												Thread.sleep(500);	
 											}else if((String.valueOf((int)_11a)).equals("3"))
 											{
 												
@@ -1525,6 +1580,7 @@ public class WaterIrrigation {
 												String _26 = sht.getRow(srn).getCell(33).getStringCellValue();
 												driver.findElement(By.id("edit-field-gw-26-total-und-0-value")).sendKeys(_26);
 												
+												
 												if((int)_21 == 2){
 													
 													String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
@@ -1559,7 +1615,7 @@ public class WaterIrrigation {
 													driver.findElement(By.id("edit-field-gw-38-total-und-0-value")).sendKeys(_38);
 												}
 												
-												else if((int)_2 == 1){
+												else if((int)_2 != 2){
 												
 												String _27 = sht.getRow(srn).getCell(34).getStringCellValue();
 												driver.findElement(By.id("edit-field-gw-27-kharif-und-0-value")).sendKeys(_27);
@@ -1583,12 +1639,10 @@ public class WaterIrrigation {
 												else if(_32.equals("N")){
 													_32 = "2";
 												}
-												
 												WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
 												Select slt32 = new Select(elm32);
-												slt32.selectByValue(_32);
-												
-												}							
+												slt32.selectByValue(_32);							
+												}					
 												
 												/* _39i */
 												//String _39i = sht.getRow(srn).getCell(62).getStringCellValue();
@@ -1602,7 +1656,7 @@ public class WaterIrrigation {
 												Select slt39ii = new Select(elm39ii);
 												slt39ii.selectByIndex(Integer.parseInt(_39ii));
 												
-												/* Remarks */												
+												/* Remarks */
 												driver.findElement(By.id("edit-field-gw-remarks-und-0-value")).sendKeys("NIL");
 												
 												/* Submit Form */
@@ -1616,7 +1670,8 @@ public class WaterIrrigation {
 												
 												driver.switchTo().alert().accept();
 												
-												Thread.sleep(500);	
+												Thread.sleep(500);
+												
 											}else if((String.valueOf((int)_11a)).equals("3"))
 											{
 												
@@ -1815,6 +1870,7 @@ public class WaterIrrigation {
 												String _26 = sht.getRow(srn).getCell(33).getStringCellValue();
 												driver.findElement(By.id("edit-field-gw-26-total-und-0-value")).sendKeys(_26);
 												
+												
 												if((int)_21 == 2){
 													
 													String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
@@ -1852,7 +1908,7 @@ public class WaterIrrigation {
 												else if((int)_2 != 2){
 												
 												String _27 = sht.getRow(srn).getCell(34).getStringCellValue();
-												driver.findElement(By.id("edit-field-gw-27-kharif-und-0-value")).sendKeys(_27);								
+												driver.findElement(By.id("edit-field-gw-27-kharif-und-0-value")).sendKeys(_27);
 													
 												String _28 = sht.getRow(srn).getCell(35).getStringCellValue();
 												driver.findElement(By.id("edit-field-gw-28-rabi-und-0-value")).sendKeys(_28);
@@ -1877,6 +1933,7 @@ public class WaterIrrigation {
 												Select slt32 = new Select(elm32);
 												slt32.selectByValue(_32);							
 												}					
+												
 												/* _39i */
 												//String _39i = sht.getRow(srn).getCell(62).getStringCellValue();
 												WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
@@ -1985,6 +2042,7 @@ public class WaterIrrigation {
 												String _26 = sht.getRow(srn).getCell(33).getStringCellValue();
 												driver.findElement(By.id("edit-field-gw-26-total-und-0-value")).sendKeys(_26);
 												
+												
 												if((int)_21 == 2){
 													
 													String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
@@ -2019,7 +2077,7 @@ public class WaterIrrigation {
 													driver.findElement(By.id("edit-field-gw-38-total-und-0-value")).sendKeys(_38);
 												}
 												
-												else if((int)_2 == 1){
+												else if((int)_2 != 2){
 												
 												String _27 = sht.getRow(srn).getCell(34).getStringCellValue();
 												driver.findElement(By.id("edit-field-gw-27-kharif-und-0-value")).sendKeys(_27);
@@ -2043,12 +2101,10 @@ public class WaterIrrigation {
 												else if(_32.equals("N")){
 													_32 = "2";
 												}
-												
 												WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
 												Select slt32 = new Select(elm32);
-												slt32.selectByValue(_32);
-												
-												}							
+												slt32.selectByValue(_32);							
+												}					
 												
 												/* _39i */
 												//String _39i = sht.getRow(srn).getCell(62).getStringCellValue();
@@ -2065,7 +2121,7 @@ public class WaterIrrigation {
 												/* Remarks */
 												driver.findElement(By.id("edit-field-gw-remarks-und-0-value")).sendKeys("NIL");
 												
-												/* Submit */
+												/* Submit Form */
 												driver.findElement(By.id("edit-submit")).click();
 												
 												//Thread.sleep(500);
@@ -2076,7 +2132,8 @@ public class WaterIrrigation {
 												
 												driver.switchTo().alert().accept();
 												
-												Thread.sleep(500);	
+												Thread.sleep(500);
+												
 											}else if((String.valueOf((int)_11a)).equals("3"))
 											{
 												
@@ -2276,6 +2333,7 @@ public class WaterIrrigation {
 												String _26 = sht.getRow(srn).getCell(33).getStringCellValue();
 												driver.findElement(By.id("edit-field-gw-26-total-und-0-value")).sendKeys(_26);
 												
+												
 												if((int)_21 == 2){
 													
 													String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
@@ -2338,6 +2396,7 @@ public class WaterIrrigation {
 												Select slt32 = new Select(elm32);
 												slt32.selectByValue(_32);							
 												}					
+												
 												/* _39i */
 												//String _39i = sht.getRow(srn).getCell(62).getStringCellValue();
 												WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
@@ -2350,27 +2409,10 @@ public class WaterIrrigation {
 												Select slt39ii = new Select(elm39ii);
 												slt39ii.selectByIndex(Integer.parseInt(_39ii));
 												
-												/*String name = sht.getRow(srn).getCell(64).getStringCellValue();
-												driver.findElement(By.id("edit-field-gw-name-und-0-value")).sendKeys(name);
-												
-												String deg = sht.getRow(srn).getCell(65).getStringCellValue();
-												driver.findElement(By.id("edit-field-gw-designation-und-0-value")).sendKeys(deg);
-												
-												double no = sht.getRow(srn).getCell(66).getNumericCellValue();
-												driver.findElement(By.id("edit-field-gw-mobile-no-und-0-value")).sendKeys(Double.toString(no));
-												
-												String _Ename = sht.getRow(srn).getCell(67).getStringCellValue();
-												driver.findElement(By.id("edit-field-gw-enumerator-name-und-0-value")).sendKeys(_Ename);
-												
-												String _Edeg = sht.getRow(srn).getCell(68).getStringCellValue();
-												driver.findElement(By.id("edit-field-gw-enum-designation-und-0-value")).sendKeys(_Edeg);
-												
-												double _Eno = sht.getRow(srn).getCell(69).getNumericCellValue();
-												driver.findElement(By.id("edit-field-gw-mobile-no-enum-und-0-value")).sendKeys(Double.toString(_Eno));*/
-												
-												//String rmk = sht.getRow(srn).getCell(70).getStringCellValue();
+												/* Remarks */
 												driver.findElement(By.id("edit-field-gw-remarks-und-0-value")).sendKeys("NIL");
 												
+												/* Submit Form */
 												driver.findElement(By.id("edit-submit")).click();
 												
 												//Thread.sleep(500);
@@ -2382,7 +2424,7 @@ public class WaterIrrigation {
 												driver.switchTo().alert().accept();
 												
 												Thread.sleep(500);
-												
+											
 											}else if((String.valueOf((int)_11a)).equals("2"))
 											{
 												WebElement elm11a = driver.findElement(By.id("edit-field-gw-11-a-und"));
@@ -2463,6 +2505,7 @@ public class WaterIrrigation {
 												String _26 = sht.getRow(srn).getCell(33).getStringCellValue();
 												driver.findElement(By.id("edit-field-gw-26-total-und-0-value")).sendKeys(_26);
 												
+												
 												if((int)_21 == 2){
 													
 													String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
@@ -2497,7 +2540,7 @@ public class WaterIrrigation {
 													driver.findElement(By.id("edit-field-gw-38-total-und-0-value")).sendKeys(_38);
 												}
 												
-												else if((int)_2 == 1){
+												else if((int)_2 != 2){
 												
 												String _27 = sht.getRow(srn).getCell(34).getStringCellValue();
 												driver.findElement(By.id("edit-field-gw-27-kharif-und-0-value")).sendKeys(_27);
@@ -2521,12 +2564,10 @@ public class WaterIrrigation {
 												else if(_32.equals("N")){
 													_32 = "2";
 												}
-												
 												WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
 												Select slt32 = new Select(elm32);
-												slt32.selectByValue(_32);
-												
-												}							
+												slt32.selectByValue(_32);							
+												}					
 												
 												/* _39i */
 												//String _39i = sht.getRow(srn).getCell(62).getStringCellValue();
@@ -2540,10 +2581,10 @@ public class WaterIrrigation {
 												Select slt39ii = new Select(elm39ii);
 												slt39ii.selectByIndex(Integer.parseInt(_39ii));
 												
-												/* Remarks */												
+												/* Remarks */
 												driver.findElement(By.id("edit-field-gw-remarks-und-0-value")).sendKeys("NIL");
 												
-												/*Submit Form */
+												/* Submit Form */
 												driver.findElement(By.id("edit-submit")).click();
 												
 												//Thread.sleep(500);
@@ -2554,7 +2595,8 @@ public class WaterIrrigation {
 												
 												driver.switchTo().alert().accept();
 												
-												Thread.sleep(500);	
+												Thread.sleep(500);
+												
 											}else if((String.valueOf((int)_11a)).equals("3"))
 											{
 												
@@ -2754,6 +2796,7 @@ public class WaterIrrigation {
 												String _26 = sht.getRow(srn).getCell(33).getStringCellValue();
 												driver.findElement(By.id("edit-field-gw-26-total-und-0-value")).sendKeys(_26);
 												
+												
 												if((int)_21 == 2){
 													
 													String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
@@ -2816,6 +2859,7 @@ public class WaterIrrigation {
 												Select slt32 = new Select(elm32);
 												slt32.selectByValue(_32);							
 												}					
+												
 												/* _39i */
 												//String _39i = sht.getRow(srn).getCell(62).getStringCellValue();
 												WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
@@ -2831,7 +2875,7 @@ public class WaterIrrigation {
 												/* Remarks */
 												driver.findElement(By.id("edit-field-gw-remarks-und-0-value")).sendKeys("NIL");
 												
-												/* Submit */
+												/* Submit Form */
 												driver.findElement(By.id("edit-submit")).click();
 												
 												//Thread.sleep(500);
@@ -2924,6 +2968,7 @@ public class WaterIrrigation {
 												String _26 = sht.getRow(srn).getCell(33).getStringCellValue();
 												driver.findElement(By.id("edit-field-gw-26-total-und-0-value")).sendKeys(_26);
 												
+												
 												if((int)_21 == 2){
 													
 													String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
@@ -2958,7 +3003,7 @@ public class WaterIrrigation {
 													driver.findElement(By.id("edit-field-gw-38-total-und-0-value")).sendKeys(_38);
 												}
 												
-												else if((int)_2 == 1){
+												else if((int)_2 != 2){
 												
 												String _27 = sht.getRow(srn).getCell(34).getStringCellValue();
 												driver.findElement(By.id("edit-field-gw-27-kharif-und-0-value")).sendKeys(_27);
@@ -2982,12 +3027,10 @@ public class WaterIrrigation {
 												else if(_32.equals("N")){
 													_32 = "2";
 												}
-												
 												WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
 												Select slt32 = new Select(elm32);
-												slt32.selectByValue(_32);
-												
-												}							
+												slt32.selectByValue(_32);							
+												}					
 												
 												/* _39i */
 												//String _39i = sht.getRow(srn).getCell(62).getStringCellValue();
@@ -2999,7 +3042,7 @@ public class WaterIrrigation {
 												String _39ii = sht.getRow(srn).getCell(46).getStringCellValue();
 												WebElement elm39ii = driver.findElement(By.id("edit-field-gw-reason-under-utilizatio-und"));
 												Select slt39ii = new Select(elm39ii);
-												slt39ii.selectByIndex(Integer.parseInt(_39ii));											
+												slt39ii.selectByIndex(Integer.parseInt(_39ii));
 												
 												/* Remarks */
 												driver.findElement(By.id("edit-field-gw-remarks-und-0-value")).sendKeys("NIL");
@@ -3015,7 +3058,8 @@ public class WaterIrrigation {
 												
 												driver.switchTo().alert().accept();
 												
-												Thread.sleep(500);	
+												Thread.sleep(500);
+												
 											}else if((String.valueOf((int)_11a)).equals("3"))
 											{
 												
