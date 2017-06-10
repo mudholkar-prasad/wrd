@@ -1041,7 +1041,194 @@ public class WaterIrrigation {
 												
 											}else if((String.valueOf((int)_11a)).equals("2"))
 											{
+												WebElement elm11a = driver.findElement(By.id("edit-field-gw-11-a-und"));
+												Select slt11a = new Select(elm11a);
+												slt11a.selectByIndex((int)_11a);
 												
+												/* Select 14 Water Distribution */
+												double _14 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
+												Select slt14 = new Select(elm14);
+												slt14.selectByIndex((int)_14);
+												
+												//String _15a = sht.getRow(srn).getCell(29).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-15-a-lifting-device-und-0-value")).sendKeys("1");
+												
+												double _15bi = sht.getRow(srn).getCell(20).getNumericCellValue();
+												WebElement elm15bi = driver.findElement(By.id("edit-field-gw-15-b-types-of-device-und"));
+												Select slt15bi = new Select(elm15bi);
+												slt15bi.selectByIndex((int)_15bi);
+												
+												/*String _15bii = sht.getRow(srn).getCell(31).getStringCellValue();
+												WebElement elm15bii = driver.findElement(By.id("edit-field-gw-types-of-device2-und"));
+												Select slt15bii = new Select(elm15bii);
+												slt15bii.selectByValue(_15bii);*/
+												
+												double _16i = sht.getRow(srn).getCell(21).getNumericCellValue();
+												WebElement elm16i = driver.findElement(By.id("edit-field-gw-16-source-energy-lift-und"));
+												Select slt16i = new Select(elm16i);
+												slt16i.selectByIndex((int)_16i);
+												
+												String _17 = sht.getRow(srn).getCell(22).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-17-horse-power-und-0-value")).sendKeys(_17);
+												
+												String _18i = sht.getRow(srn).getCell(23).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-18-kharif-season-und-0-value")).sendKeys(_18i);
+												
+												//String _18ii = sht.getRow(srn).getCell(23).getStringCellValue().substring(2,1);
+												driver.findElement(By.id("edit-field-gw-18-rabi-season-und-0-value")).sendKeys("0");
+												
+												String _18iii = sht.getRow(srn).getCell(24).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-18-perennia-und-0-value")).sendKeys(_18iii);
+												
+												//String _18iv = sht.getRow(srn).getCell(24).getStringCellValue().substring(2,1);
+												driver.findElement(By.id("edit-field-gw-18-other-season-und-0-value")).sendKeys("0");
+												
+												String _19i = sht.getRow(srn).getCell(25).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-19-kharif-season-und-0-value")).sendKeys(_19i);
+												
+												//String _19ii = sht.getRow(srn).getCell(25).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-19-rabi-season-und-0-value")).sendKeys("0");
+												
+												String _19iii = sht.getRow(srn).getCell(26).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-19-perennia-und-0-value")).sendKeys(_19iii);
+												
+												//String _19iv = sht.getRow(srn).getCell(26).getStringCellValue().substring(2);
+												driver.findElement(By.id("edit-field-gw-19-other-season-und-0-value")).sendKeys("0");
+												
+												double _20 = sht.getRow(srn).getCell(27).getNumericCellValue();
+												driver.findElement(By.id("edit-field-gw-20-culturable-command-und-0-value")).sendKeys(Double.toString(_20));
+												
+												double _21 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												WebElement elm21 = driver.findElement(By.id("edit-field-gw-21-major-medium-scheme-und"));
+												Select slt21 = new Select(elm21);
+												slt21.selectByIndex((int)_21);
+												
+												String _22 = sht.getRow(srn).getCell(29).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-22-kharif-und-0-value")).sendKeys(_22);
+												
+												String _23 = sht.getRow(srn).getCell(30).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-23-rabi-und-0-value")).sendKeys(_23);
+												
+												String _24 = sht.getRow(srn).getCell(31).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-24-perennial-und-0-value")).sendKeys(_24);
+												
+												String _25 = sht.getRow(srn).getCell(32).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-25-other-und-0-value")).sendKeys(_25);
+												
+												String _26 = sht.getRow(srn).getCell(33).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-26-total-und-0-value")).sendKeys(_26);
+												
+												if((int)_21 == 2){
+													
+													String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
+													if(_32.equals("Y")){
+														_32 = "1";
+													}
+													else if(_32.equals("N")){
+														_32 = "2";
+													}
+													WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+													Select slt32 = new Select(elm32);
+													slt32.selectByValue(_32);
+													
+													/* _34 */
+													String _34 = sht.getRow(srn).getCell(41).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-34-kharif-und-0-value")).sendKeys(_34);
+													
+													/* _35 */
+													String _35 = sht.getRow(srn).getCell(42).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-35-rabi-und-0-value")).sendKeys(_35);
+													
+													/* _36 */
+													String _36 = sht.getRow(srn).getCell(43).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-36-perennial-und-0-value")).sendKeys(_36);
+													
+													/* _37 */
+													String _37 = sht.getRow(srn).getCell(44).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-37-other-und-0-value")).sendKeys(_37);
+													
+													/* _38 */
+													String _38 = sht.getRow(srn).getCell(45).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-38-total-und-0-value")).sendKeys(_38);
+												}
+												
+												else if((int)_2 == 1){
+												
+												String _27 = sht.getRow(srn).getCell(34).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-27-kharif-und-0-value")).sendKeys(_27);
+													
+												String _28 = sht.getRow(srn).getCell(35).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-28-rabi-und-0-value")).sendKeys(_28);
+												
+												String _29 = sht.getRow(srn).getCell(36).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-29-perennial-und-0-value")).sendKeys(_29);
+												
+												String _30 = sht.getRow(srn).getCell(37).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-30-other-und-0-value")).sendKeys(_30);
+												
+												String _31 = sht.getRow(srn).getCell(38).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-31-total-und-0-value")).sendKeys(_31);
+												
+												String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
+												if(_32.equals("Y")){
+													_32 = "1";
+												}
+												else if(_32.equals("N")){
+													_32 = "2";
+												}
+												
+												WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+												Select slt32 = new Select(elm32);
+												slt32.selectByValue(_32);
+												
+												}							
+												
+												/* _39i */
+												//String _39i = sht.getRow(srn).getCell(62).getStringCellValue();
+												WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
+												Select slt39i = new Select(elm39i);
+												slt39i.selectByValue("1");
+												
+												/* _39ii */
+												String _39ii = sht.getRow(srn).getCell(46).getStringCellValue();
+												WebElement elm39ii = driver.findElement(By.id("edit-field-gw-reason-under-utilizatio-und"));
+												Select slt39ii = new Select(elm39ii);
+												slt39ii.selectByIndex(Integer.parseInt(_39ii));
+												
+												/*String name = sht.getRow(srn).getCell(64).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-name-und-0-value")).sendKeys(name);
+												
+												String deg = sht.getRow(srn).getCell(65).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-designation-und-0-value")).sendKeys(deg);
+												
+												double no = sht.getRow(srn).getCell(66).getNumericCellValue();
+												driver.findElement(By.id("edit-field-gw-mobile-no-und-0-value")).sendKeys(Double.toString(no));
+												
+												String _Ename = sht.getRow(srn).getCell(67).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-enumerator-name-und-0-value")).sendKeys(_Ename);
+												
+												String _Edeg = sht.getRow(srn).getCell(68).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-enum-designation-und-0-value")).sendKeys(_Edeg);
+												
+												double _Eno = sht.getRow(srn).getCell(69).getNumericCellValue();
+												driver.findElement(By.id("edit-field-gw-mobile-no-enum-und-0-value")).sendKeys(Double.toString(_Eno));*/
+												
+												//String rmk = sht.getRow(srn).getCell(70).getStringCellValue();
+												
+												driver.findElement(By.id("edit-field-gw-remarks-und-0-value")).sendKeys("NIL");
+												
+												driver.findElement(By.id("edit-submit")).click();
+												
+												//Thread.sleep(500);
+												
+												driver.switchTo().alert().accept();
+												
+												Thread.sleep(200);
+												
+												driver.switchTo().alert().accept();
+												
+												Thread.sleep(500);	
 											}else if((String.valueOf((int)_11a)).equals("3"))
 											{
 												
@@ -1348,7 +1535,194 @@ public class WaterIrrigation {
 												
 											}else if((String.valueOf((int)_11a)).equals("2"))
 											{
+												WebElement elm11a = driver.findElement(By.id("edit-field-gw-11-a-und"));
+												Select slt11a = new Select(elm11a);
+												slt11a.selectByIndex((int)_11a);
 												
+												/* Select 14 Water Distribution */
+												double _14 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
+												Select slt14 = new Select(elm14);
+												slt14.selectByIndex((int)_14);
+												
+												//String _15a = sht.getRow(srn).getCell(29).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-15-a-lifting-device-und-0-value")).sendKeys("1");
+												
+												double _15bi = sht.getRow(srn).getCell(20).getNumericCellValue();
+												WebElement elm15bi = driver.findElement(By.id("edit-field-gw-15-b-types-of-device-und"));
+												Select slt15bi = new Select(elm15bi);
+												slt15bi.selectByIndex((int)_15bi);
+												
+												/*String _15bii = sht.getRow(srn).getCell(31).getStringCellValue();
+												WebElement elm15bii = driver.findElement(By.id("edit-field-gw-types-of-device2-und"));
+												Select slt15bii = new Select(elm15bii);
+												slt15bii.selectByValue(_15bii);*/
+												
+												double _16i = sht.getRow(srn).getCell(21).getNumericCellValue();
+												WebElement elm16i = driver.findElement(By.id("edit-field-gw-16-source-energy-lift-und"));
+												Select slt16i = new Select(elm16i);
+												slt16i.selectByIndex((int)_16i);
+												
+												String _17 = sht.getRow(srn).getCell(22).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-17-horse-power-und-0-value")).sendKeys(_17);
+												
+												String _18i = sht.getRow(srn).getCell(23).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-18-kharif-season-und-0-value")).sendKeys(_18i);
+												
+												//String _18ii = sht.getRow(srn).getCell(23).getStringCellValue().substring(2,1);
+												driver.findElement(By.id("edit-field-gw-18-rabi-season-und-0-value")).sendKeys("0");
+												
+												String _18iii = sht.getRow(srn).getCell(24).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-18-perennia-und-0-value")).sendKeys(_18iii);
+												
+												//String _18iv = sht.getRow(srn).getCell(24).getStringCellValue().substring(2,1);
+												driver.findElement(By.id("edit-field-gw-18-other-season-und-0-value")).sendKeys("0");
+												
+												String _19i = sht.getRow(srn).getCell(25).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-19-kharif-season-und-0-value")).sendKeys(_19i);
+												
+												//String _19ii = sht.getRow(srn).getCell(25).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-19-rabi-season-und-0-value")).sendKeys("0");
+												
+												String _19iii = sht.getRow(srn).getCell(26).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-19-perennia-und-0-value")).sendKeys(_19iii);
+												
+												//String _19iv = sht.getRow(srn).getCell(26).getStringCellValue().substring(2);
+												driver.findElement(By.id("edit-field-gw-19-other-season-und-0-value")).sendKeys("0");
+												
+												double _20 = sht.getRow(srn).getCell(27).getNumericCellValue();
+												driver.findElement(By.id("edit-field-gw-20-culturable-command-und-0-value")).sendKeys(Double.toString(_20));
+												
+												double _21 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												WebElement elm21 = driver.findElement(By.id("edit-field-gw-21-major-medium-scheme-und"));
+												Select slt21 = new Select(elm21);
+												slt21.selectByIndex((int)_21);
+												
+												String _22 = sht.getRow(srn).getCell(29).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-22-kharif-und-0-value")).sendKeys(_22);
+												
+												String _23 = sht.getRow(srn).getCell(30).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-23-rabi-und-0-value")).sendKeys(_23);
+												
+												String _24 = sht.getRow(srn).getCell(31).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-24-perennial-und-0-value")).sendKeys(_24);
+												
+												String _25 = sht.getRow(srn).getCell(32).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-25-other-und-0-value")).sendKeys(_25);
+												
+												String _26 = sht.getRow(srn).getCell(33).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-26-total-und-0-value")).sendKeys(_26);
+												
+												if((int)_21 == 2){
+													
+													String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
+													if(_32.equals("Y")){
+														_32 = "1";
+													}
+													else if(_32.equals("N")){
+														_32 = "2";
+													}
+													WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+													Select slt32 = new Select(elm32);
+													slt32.selectByValue(_32);
+													
+													/* _34 */
+													String _34 = sht.getRow(srn).getCell(41).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-34-kharif-und-0-value")).sendKeys(_34);
+													
+													/* _35 */
+													String _35 = sht.getRow(srn).getCell(42).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-35-rabi-und-0-value")).sendKeys(_35);
+													
+													/* _36 */
+													String _36 = sht.getRow(srn).getCell(43).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-36-perennial-und-0-value")).sendKeys(_36);
+													
+													/* _37 */
+													String _37 = sht.getRow(srn).getCell(44).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-37-other-und-0-value")).sendKeys(_37);
+													
+													/* _38 */
+													String _38 = sht.getRow(srn).getCell(45).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-38-total-und-0-value")).sendKeys(_38);
+												}
+												
+												else if((int)_2 == 1){
+												
+												String _27 = sht.getRow(srn).getCell(34).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-27-kharif-und-0-value")).sendKeys(_27);
+													
+												String _28 = sht.getRow(srn).getCell(35).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-28-rabi-und-0-value")).sendKeys(_28);
+												
+												String _29 = sht.getRow(srn).getCell(36).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-29-perennial-und-0-value")).sendKeys(_29);
+												
+												String _30 = sht.getRow(srn).getCell(37).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-30-other-und-0-value")).sendKeys(_30);
+												
+												String _31 = sht.getRow(srn).getCell(38).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-31-total-und-0-value")).sendKeys(_31);
+												
+												String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
+												if(_32.equals("Y")){
+													_32 = "1";
+												}
+												else if(_32.equals("N")){
+													_32 = "2";
+												}
+												
+												WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+												Select slt32 = new Select(elm32);
+												slt32.selectByValue(_32);
+												
+												}							
+												
+												/* _39i */
+												//String _39i = sht.getRow(srn).getCell(62).getStringCellValue();
+												WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
+												Select slt39i = new Select(elm39i);
+												slt39i.selectByValue("1");
+												
+												/* _39ii */
+												String _39ii = sht.getRow(srn).getCell(46).getStringCellValue();
+												WebElement elm39ii = driver.findElement(By.id("edit-field-gw-reason-under-utilizatio-und"));
+												Select slt39ii = new Select(elm39ii);
+												slt39ii.selectByIndex(Integer.parseInt(_39ii));
+												
+												/*String name = sht.getRow(srn).getCell(64).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-name-und-0-value")).sendKeys(name);
+												
+												String deg = sht.getRow(srn).getCell(65).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-designation-und-0-value")).sendKeys(deg);
+												
+												double no = sht.getRow(srn).getCell(66).getNumericCellValue();
+												driver.findElement(By.id("edit-field-gw-mobile-no-und-0-value")).sendKeys(Double.toString(no));
+												
+												String _Ename = sht.getRow(srn).getCell(67).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-enumerator-name-und-0-value")).sendKeys(_Ename);
+												
+												String _Edeg = sht.getRow(srn).getCell(68).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-enum-designation-und-0-value")).sendKeys(_Edeg);
+												
+												double _Eno = sht.getRow(srn).getCell(69).getNumericCellValue();
+												driver.findElement(By.id("edit-field-gw-mobile-no-enum-und-0-value")).sendKeys(Double.toString(_Eno));*/
+												
+												//String rmk = sht.getRow(srn).getCell(70).getStringCellValue();
+												
+												driver.findElement(By.id("edit-field-gw-remarks-und-0-value")).sendKeys("NIL");
+												
+												driver.findElement(By.id("edit-submit")).click();
+												
+												//Thread.sleep(500);
+												
+												driver.switchTo().alert().accept();
+												
+												Thread.sleep(200);
+												
+												driver.switchTo().alert().accept();
+												
+												Thread.sleep(500);	
 											}else if((String.valueOf((int)_11a)).equals("3"))
 											{
 												
@@ -1656,7 +2030,194 @@ public class WaterIrrigation {
 												
 											}else if((String.valueOf((int)_11a)).equals("2"))
 											{
+												WebElement elm11a = driver.findElement(By.id("edit-field-gw-11-a-und"));
+												Select slt11a = new Select(elm11a);
+												slt11a.selectByIndex((int)_11a);
 												
+												/* Select 14 Water Distribution */
+												double _14 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
+												Select slt14 = new Select(elm14);
+												slt14.selectByIndex((int)_14);
+												
+												//String _15a = sht.getRow(srn).getCell(29).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-15-a-lifting-device-und-0-value")).sendKeys("1");
+												
+												double _15bi = sht.getRow(srn).getCell(20).getNumericCellValue();
+												WebElement elm15bi = driver.findElement(By.id("edit-field-gw-15-b-types-of-device-und"));
+												Select slt15bi = new Select(elm15bi);
+												slt15bi.selectByIndex((int)_15bi);
+												
+												/*String _15bii = sht.getRow(srn).getCell(31).getStringCellValue();
+												WebElement elm15bii = driver.findElement(By.id("edit-field-gw-types-of-device2-und"));
+												Select slt15bii = new Select(elm15bii);
+												slt15bii.selectByValue(_15bii);*/
+												
+												double _16i = sht.getRow(srn).getCell(21).getNumericCellValue();
+												WebElement elm16i = driver.findElement(By.id("edit-field-gw-16-source-energy-lift-und"));
+												Select slt16i = new Select(elm16i);
+												slt16i.selectByIndex((int)_16i);
+												
+												String _17 = sht.getRow(srn).getCell(22).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-17-horse-power-und-0-value")).sendKeys(_17);
+												
+												String _18i = sht.getRow(srn).getCell(23).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-18-kharif-season-und-0-value")).sendKeys(_18i);
+												
+												//String _18ii = sht.getRow(srn).getCell(23).getStringCellValue().substring(2,1);
+												driver.findElement(By.id("edit-field-gw-18-rabi-season-und-0-value")).sendKeys("0");
+												
+												String _18iii = sht.getRow(srn).getCell(24).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-18-perennia-und-0-value")).sendKeys(_18iii);
+												
+												//String _18iv = sht.getRow(srn).getCell(24).getStringCellValue().substring(2,1);
+												driver.findElement(By.id("edit-field-gw-18-other-season-und-0-value")).sendKeys("0");
+												
+												String _19i = sht.getRow(srn).getCell(25).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-19-kharif-season-und-0-value")).sendKeys(_19i);
+												
+												//String _19ii = sht.getRow(srn).getCell(25).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-19-rabi-season-und-0-value")).sendKeys("0");
+												
+												String _19iii = sht.getRow(srn).getCell(26).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-19-perennia-und-0-value")).sendKeys(_19iii);
+												
+												//String _19iv = sht.getRow(srn).getCell(26).getStringCellValue().substring(2);
+												driver.findElement(By.id("edit-field-gw-19-other-season-und-0-value")).sendKeys("0");
+												
+												double _20 = sht.getRow(srn).getCell(27).getNumericCellValue();
+												driver.findElement(By.id("edit-field-gw-20-culturable-command-und-0-value")).sendKeys(Double.toString(_20));
+												
+												double _21 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												WebElement elm21 = driver.findElement(By.id("edit-field-gw-21-major-medium-scheme-und"));
+												Select slt21 = new Select(elm21);
+												slt21.selectByIndex((int)_21);
+												
+												String _22 = sht.getRow(srn).getCell(29).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-22-kharif-und-0-value")).sendKeys(_22);
+												
+												String _23 = sht.getRow(srn).getCell(30).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-23-rabi-und-0-value")).sendKeys(_23);
+												
+												String _24 = sht.getRow(srn).getCell(31).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-24-perennial-und-0-value")).sendKeys(_24);
+												
+												String _25 = sht.getRow(srn).getCell(32).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-25-other-und-0-value")).sendKeys(_25);
+												
+												String _26 = sht.getRow(srn).getCell(33).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-26-total-und-0-value")).sendKeys(_26);
+												
+												if((int)_21 == 2){
+													
+													String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
+													if(_32.equals("Y")){
+														_32 = "1";
+													}
+													else if(_32.equals("N")){
+														_32 = "2";
+													}
+													WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+													Select slt32 = new Select(elm32);
+													slt32.selectByValue(_32);
+													
+													/* _34 */
+													String _34 = sht.getRow(srn).getCell(41).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-34-kharif-und-0-value")).sendKeys(_34);
+													
+													/* _35 */
+													String _35 = sht.getRow(srn).getCell(42).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-35-rabi-und-0-value")).sendKeys(_35);
+													
+													/* _36 */
+													String _36 = sht.getRow(srn).getCell(43).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-36-perennial-und-0-value")).sendKeys(_36);
+													
+													/* _37 */
+													String _37 = sht.getRow(srn).getCell(44).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-37-other-und-0-value")).sendKeys(_37);
+													
+													/* _38 */
+													String _38 = sht.getRow(srn).getCell(45).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-38-total-und-0-value")).sendKeys(_38);
+												}
+												
+												else if((int)_2 == 1){
+												
+												String _27 = sht.getRow(srn).getCell(34).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-27-kharif-und-0-value")).sendKeys(_27);
+													
+												String _28 = sht.getRow(srn).getCell(35).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-28-rabi-und-0-value")).sendKeys(_28);
+												
+												String _29 = sht.getRow(srn).getCell(36).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-29-perennial-und-0-value")).sendKeys(_29);
+												
+												String _30 = sht.getRow(srn).getCell(37).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-30-other-und-0-value")).sendKeys(_30);
+												
+												String _31 = sht.getRow(srn).getCell(38).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-31-total-und-0-value")).sendKeys(_31);
+												
+												String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
+												if(_32.equals("Y")){
+													_32 = "1";
+												}
+												else if(_32.equals("N")){
+													_32 = "2";
+												}
+												
+												WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+												Select slt32 = new Select(elm32);
+												slt32.selectByValue(_32);
+												
+												}							
+												
+												/* _39i */
+												//String _39i = sht.getRow(srn).getCell(62).getStringCellValue();
+												WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
+												Select slt39i = new Select(elm39i);
+												slt39i.selectByValue("1");
+												
+												/* _39ii */
+												String _39ii = sht.getRow(srn).getCell(46).getStringCellValue();
+												WebElement elm39ii = driver.findElement(By.id("edit-field-gw-reason-under-utilizatio-und"));
+												Select slt39ii = new Select(elm39ii);
+												slt39ii.selectByIndex(Integer.parseInt(_39ii));
+												
+												/*String name = sht.getRow(srn).getCell(64).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-name-und-0-value")).sendKeys(name);
+												
+												String deg = sht.getRow(srn).getCell(65).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-designation-und-0-value")).sendKeys(deg);
+												
+												double no = sht.getRow(srn).getCell(66).getNumericCellValue();
+												driver.findElement(By.id("edit-field-gw-mobile-no-und-0-value")).sendKeys(Double.toString(no));
+												
+												String _Ename = sht.getRow(srn).getCell(67).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-enumerator-name-und-0-value")).sendKeys(_Ename);
+												
+												String _Edeg = sht.getRow(srn).getCell(68).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-enum-designation-und-0-value")).sendKeys(_Edeg);
+												
+												double _Eno = sht.getRow(srn).getCell(69).getNumericCellValue();
+												driver.findElement(By.id("edit-field-gw-mobile-no-enum-und-0-value")).sendKeys(Double.toString(_Eno));*/
+												
+												//String rmk = sht.getRow(srn).getCell(70).getStringCellValue();
+												
+												driver.findElement(By.id("edit-field-gw-remarks-und-0-value")).sendKeys("NIL");
+												
+												driver.findElement(By.id("edit-submit")).click();
+												
+												//Thread.sleep(500);
+												
+												driver.switchTo().alert().accept();
+												
+												Thread.sleep(200);
+												
+												driver.switchTo().alert().accept();
+												
+												Thread.sleep(500);	
 											}else if((String.valueOf((int)_11a)).equals("3"))
 											{
 												
@@ -1965,7 +2526,194 @@ public class WaterIrrigation {
 												
 											}else if((String.valueOf((int)_11a)).equals("2"))
 											{
+												WebElement elm11a = driver.findElement(By.id("edit-field-gw-11-a-und"));
+												Select slt11a = new Select(elm11a);
+												slt11a.selectByIndex((int)_11a);
 												
+												/* Select 14 Water Distribution */
+												double _14 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
+												Select slt14 = new Select(elm14);
+												slt14.selectByIndex((int)_14);
+												
+												//String _15a = sht.getRow(srn).getCell(29).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-15-a-lifting-device-und-0-value")).sendKeys("1");
+												
+												double _15bi = sht.getRow(srn).getCell(20).getNumericCellValue();
+												WebElement elm15bi = driver.findElement(By.id("edit-field-gw-15-b-types-of-device-und"));
+												Select slt15bi = new Select(elm15bi);
+												slt15bi.selectByIndex((int)_15bi);
+												
+												/*String _15bii = sht.getRow(srn).getCell(31).getStringCellValue();
+												WebElement elm15bii = driver.findElement(By.id("edit-field-gw-types-of-device2-und"));
+												Select slt15bii = new Select(elm15bii);
+												slt15bii.selectByValue(_15bii);*/
+												
+												double _16i = sht.getRow(srn).getCell(21).getNumericCellValue();
+												WebElement elm16i = driver.findElement(By.id("edit-field-gw-16-source-energy-lift-und"));
+												Select slt16i = new Select(elm16i);
+												slt16i.selectByIndex((int)_16i);
+												
+												String _17 = sht.getRow(srn).getCell(22).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-17-horse-power-und-0-value")).sendKeys(_17);
+												
+												String _18i = sht.getRow(srn).getCell(23).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-18-kharif-season-und-0-value")).sendKeys(_18i);
+												
+												//String _18ii = sht.getRow(srn).getCell(23).getStringCellValue().substring(2,1);
+												driver.findElement(By.id("edit-field-gw-18-rabi-season-und-0-value")).sendKeys("0");
+												
+												String _18iii = sht.getRow(srn).getCell(24).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-18-perennia-und-0-value")).sendKeys(_18iii);
+												
+												//String _18iv = sht.getRow(srn).getCell(24).getStringCellValue().substring(2,1);
+												driver.findElement(By.id("edit-field-gw-18-other-season-und-0-value")).sendKeys("0");
+												
+												String _19i = sht.getRow(srn).getCell(25).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-19-kharif-season-und-0-value")).sendKeys(_19i);
+												
+												//String _19ii = sht.getRow(srn).getCell(25).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-19-rabi-season-und-0-value")).sendKeys("0");
+												
+												String _19iii = sht.getRow(srn).getCell(26).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-19-perennia-und-0-value")).sendKeys(_19iii);
+												
+												//String _19iv = sht.getRow(srn).getCell(26).getStringCellValue().substring(2);
+												driver.findElement(By.id("edit-field-gw-19-other-season-und-0-value")).sendKeys("0");
+												
+												double _20 = sht.getRow(srn).getCell(27).getNumericCellValue();
+												driver.findElement(By.id("edit-field-gw-20-culturable-command-und-0-value")).sendKeys(Double.toString(_20));
+												
+												double _21 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												WebElement elm21 = driver.findElement(By.id("edit-field-gw-21-major-medium-scheme-und"));
+												Select slt21 = new Select(elm21);
+												slt21.selectByIndex((int)_21);
+												
+												String _22 = sht.getRow(srn).getCell(29).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-22-kharif-und-0-value")).sendKeys(_22);
+												
+												String _23 = sht.getRow(srn).getCell(30).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-23-rabi-und-0-value")).sendKeys(_23);
+												
+												String _24 = sht.getRow(srn).getCell(31).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-24-perennial-und-0-value")).sendKeys(_24);
+												
+												String _25 = sht.getRow(srn).getCell(32).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-25-other-und-0-value")).sendKeys(_25);
+												
+												String _26 = sht.getRow(srn).getCell(33).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-26-total-und-0-value")).sendKeys(_26);
+												
+												if((int)_21 == 2){
+													
+													String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
+													if(_32.equals("Y")){
+														_32 = "1";
+													}
+													else if(_32.equals("N")){
+														_32 = "2";
+													}
+													WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+													Select slt32 = new Select(elm32);
+													slt32.selectByValue(_32);
+													
+													/* _34 */
+													String _34 = sht.getRow(srn).getCell(41).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-34-kharif-und-0-value")).sendKeys(_34);
+													
+													/* _35 */
+													String _35 = sht.getRow(srn).getCell(42).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-35-rabi-und-0-value")).sendKeys(_35);
+													
+													/* _36 */
+													String _36 = sht.getRow(srn).getCell(43).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-36-perennial-und-0-value")).sendKeys(_36);
+													
+													/* _37 */
+													String _37 = sht.getRow(srn).getCell(44).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-37-other-und-0-value")).sendKeys(_37);
+													
+													/* _38 */
+													String _38 = sht.getRow(srn).getCell(45).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-38-total-und-0-value")).sendKeys(_38);
+												}
+												
+												else if((int)_2 == 1){
+												
+												String _27 = sht.getRow(srn).getCell(34).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-27-kharif-und-0-value")).sendKeys(_27);
+													
+												String _28 = sht.getRow(srn).getCell(35).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-28-rabi-und-0-value")).sendKeys(_28);
+												
+												String _29 = sht.getRow(srn).getCell(36).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-29-perennial-und-0-value")).sendKeys(_29);
+												
+												String _30 = sht.getRow(srn).getCell(37).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-30-other-und-0-value")).sendKeys(_30);
+												
+												String _31 = sht.getRow(srn).getCell(38).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-31-total-und-0-value")).sendKeys(_31);
+												
+												String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
+												if(_32.equals("Y")){
+													_32 = "1";
+												}
+												else if(_32.equals("N")){
+													_32 = "2";
+												}
+												
+												WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+												Select slt32 = new Select(elm32);
+												slt32.selectByValue(_32);
+												
+												}							
+												
+												/* _39i */
+												//String _39i = sht.getRow(srn).getCell(62).getStringCellValue();
+												WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
+												Select slt39i = new Select(elm39i);
+												slt39i.selectByValue("1");
+												
+												/* _39ii */
+												String _39ii = sht.getRow(srn).getCell(46).getStringCellValue();
+												WebElement elm39ii = driver.findElement(By.id("edit-field-gw-reason-under-utilizatio-und"));
+												Select slt39ii = new Select(elm39ii);
+												slt39ii.selectByIndex(Integer.parseInt(_39ii));
+												
+												/*String name = sht.getRow(srn).getCell(64).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-name-und-0-value")).sendKeys(name);
+												
+												String deg = sht.getRow(srn).getCell(65).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-designation-und-0-value")).sendKeys(deg);
+												
+												double no = sht.getRow(srn).getCell(66).getNumericCellValue();
+												driver.findElement(By.id("edit-field-gw-mobile-no-und-0-value")).sendKeys(Double.toString(no));
+												
+												String _Ename = sht.getRow(srn).getCell(67).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-enumerator-name-und-0-value")).sendKeys(_Ename);
+												
+												String _Edeg = sht.getRow(srn).getCell(68).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-enum-designation-und-0-value")).sendKeys(_Edeg);
+												
+												double _Eno = sht.getRow(srn).getCell(69).getNumericCellValue();
+												driver.findElement(By.id("edit-field-gw-mobile-no-enum-und-0-value")).sendKeys(Double.toString(_Eno));*/
+												
+												//String rmk = sht.getRow(srn).getCell(70).getStringCellValue();
+												
+												driver.findElement(By.id("edit-field-gw-remarks-und-0-value")).sendKeys("NIL");
+												
+												driver.findElement(By.id("edit-submit")).click();
+												
+												//Thread.sleep(500);
+												
+												driver.switchTo().alert().accept();
+												
+												Thread.sleep(200);
+												
+												driver.switchTo().alert().accept();
+												
+												Thread.sleep(500);	
 											}else if((String.valueOf((int)_11a)).equals("3"))
 											{
 												
@@ -2274,7 +3022,194 @@ public class WaterIrrigation {
 												
 											}else if((String.valueOf((int)_11a)).equals("2"))
 											{
+												WebElement elm11a = driver.findElement(By.id("edit-field-gw-11-a-und"));
+												Select slt11a = new Select(elm11a);
+												slt11a.selectByIndex((int)_11a);
 												
+												/* Select 14 Water Distribution */
+												double _14 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
+												Select slt14 = new Select(elm14);
+												slt14.selectByIndex((int)_14);
+												
+												//String _15a = sht.getRow(srn).getCell(29).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-15-a-lifting-device-und-0-value")).sendKeys("1");
+												
+												double _15bi = sht.getRow(srn).getCell(20).getNumericCellValue();
+												WebElement elm15bi = driver.findElement(By.id("edit-field-gw-15-b-types-of-device-und"));
+												Select slt15bi = new Select(elm15bi);
+												slt15bi.selectByIndex((int)_15bi);
+												
+												/*String _15bii = sht.getRow(srn).getCell(31).getStringCellValue();
+												WebElement elm15bii = driver.findElement(By.id("edit-field-gw-types-of-device2-und"));
+												Select slt15bii = new Select(elm15bii);
+												slt15bii.selectByValue(_15bii);*/
+												
+												double _16i = sht.getRow(srn).getCell(21).getNumericCellValue();
+												WebElement elm16i = driver.findElement(By.id("edit-field-gw-16-source-energy-lift-und"));
+												Select slt16i = new Select(elm16i);
+												slt16i.selectByIndex((int)_16i);
+												
+												String _17 = sht.getRow(srn).getCell(22).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-17-horse-power-und-0-value")).sendKeys(_17);
+												
+												String _18i = sht.getRow(srn).getCell(23).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-18-kharif-season-und-0-value")).sendKeys(_18i);
+												
+												//String _18ii = sht.getRow(srn).getCell(23).getStringCellValue().substring(2,1);
+												driver.findElement(By.id("edit-field-gw-18-rabi-season-und-0-value")).sendKeys("0");
+												
+												String _18iii = sht.getRow(srn).getCell(24).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-18-perennia-und-0-value")).sendKeys(_18iii);
+												
+												//String _18iv = sht.getRow(srn).getCell(24).getStringCellValue().substring(2,1);
+												driver.findElement(By.id("edit-field-gw-18-other-season-und-0-value")).sendKeys("0");
+												
+												String _19i = sht.getRow(srn).getCell(25).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-19-kharif-season-und-0-value")).sendKeys(_19i);
+												
+												//String _19ii = sht.getRow(srn).getCell(25).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-19-rabi-season-und-0-value")).sendKeys("0");
+												
+												String _19iii = sht.getRow(srn).getCell(26).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-19-perennia-und-0-value")).sendKeys(_19iii);
+												
+												//String _19iv = sht.getRow(srn).getCell(26).getStringCellValue().substring(2);
+												driver.findElement(By.id("edit-field-gw-19-other-season-und-0-value")).sendKeys("0");
+												
+												double _20 = sht.getRow(srn).getCell(27).getNumericCellValue();
+												driver.findElement(By.id("edit-field-gw-20-culturable-command-und-0-value")).sendKeys(Double.toString(_20));
+												
+												double _21 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												WebElement elm21 = driver.findElement(By.id("edit-field-gw-21-major-medium-scheme-und"));
+												Select slt21 = new Select(elm21);
+												slt21.selectByIndex((int)_21);
+												
+												String _22 = sht.getRow(srn).getCell(29).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-22-kharif-und-0-value")).sendKeys(_22);
+												
+												String _23 = sht.getRow(srn).getCell(30).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-23-rabi-und-0-value")).sendKeys(_23);
+												
+												String _24 = sht.getRow(srn).getCell(31).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-24-perennial-und-0-value")).sendKeys(_24);
+												
+												String _25 = sht.getRow(srn).getCell(32).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-25-other-und-0-value")).sendKeys(_25);
+												
+												String _26 = sht.getRow(srn).getCell(33).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-26-total-und-0-value")).sendKeys(_26);
+												
+												if((int)_21 == 2){
+													
+													String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
+													if(_32.equals("Y")){
+														_32 = "1";
+													}
+													else if(_32.equals("N")){
+														_32 = "2";
+													}
+													WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+													Select slt32 = new Select(elm32);
+													slt32.selectByValue(_32);
+													
+													/* _34 */
+													String _34 = sht.getRow(srn).getCell(41).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-34-kharif-und-0-value")).sendKeys(_34);
+													
+													/* _35 */
+													String _35 = sht.getRow(srn).getCell(42).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-35-rabi-und-0-value")).sendKeys(_35);
+													
+													/* _36 */
+													String _36 = sht.getRow(srn).getCell(43).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-36-perennial-und-0-value")).sendKeys(_36);
+													
+													/* _37 */
+													String _37 = sht.getRow(srn).getCell(44).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-37-other-und-0-value")).sendKeys(_37);
+													
+													/* _38 */
+													String _38 = sht.getRow(srn).getCell(45).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-38-total-und-0-value")).sendKeys(_38);
+												}
+												
+												else if((int)_2 == 1){
+												
+												String _27 = sht.getRow(srn).getCell(34).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-27-kharif-und-0-value")).sendKeys(_27);
+													
+												String _28 = sht.getRow(srn).getCell(35).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-28-rabi-und-0-value")).sendKeys(_28);
+												
+												String _29 = sht.getRow(srn).getCell(36).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-29-perennial-und-0-value")).sendKeys(_29);
+												
+												String _30 = sht.getRow(srn).getCell(37).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-30-other-und-0-value")).sendKeys(_30);
+												
+												String _31 = sht.getRow(srn).getCell(38).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-31-total-und-0-value")).sendKeys(_31);
+												
+												String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
+												if(_32.equals("Y")){
+													_32 = "1";
+												}
+												else if(_32.equals("N")){
+													_32 = "2";
+												}
+												
+												WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+												Select slt32 = new Select(elm32);
+												slt32.selectByValue(_32);
+												
+												}							
+												
+												/* _39i */
+												//String _39i = sht.getRow(srn).getCell(62).getStringCellValue();
+												WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
+												Select slt39i = new Select(elm39i);
+												slt39i.selectByValue("1");
+												
+												/* _39ii */
+												String _39ii = sht.getRow(srn).getCell(46).getStringCellValue();
+												WebElement elm39ii = driver.findElement(By.id("edit-field-gw-reason-under-utilizatio-und"));
+												Select slt39ii = new Select(elm39ii);
+												slt39ii.selectByIndex(Integer.parseInt(_39ii));
+												
+												/*String name = sht.getRow(srn).getCell(64).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-name-und-0-value")).sendKeys(name);
+												
+												String deg = sht.getRow(srn).getCell(65).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-designation-und-0-value")).sendKeys(deg);
+												
+												double no = sht.getRow(srn).getCell(66).getNumericCellValue();
+												driver.findElement(By.id("edit-field-gw-mobile-no-und-0-value")).sendKeys(Double.toString(no));
+												
+												String _Ename = sht.getRow(srn).getCell(67).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-enumerator-name-und-0-value")).sendKeys(_Ename);
+												
+												String _Edeg = sht.getRow(srn).getCell(68).getStringCellValue();
+												driver.findElement(By.id("edit-field-gw-enum-designation-und-0-value")).sendKeys(_Edeg);
+												
+												double _Eno = sht.getRow(srn).getCell(69).getNumericCellValue();
+												driver.findElement(By.id("edit-field-gw-mobile-no-enum-und-0-value")).sendKeys(Double.toString(_Eno));*/
+												
+												//String rmk = sht.getRow(srn).getCell(70).getStringCellValue();
+												
+												driver.findElement(By.id("edit-field-gw-remarks-und-0-value")).sendKeys("NIL");
+												
+												driver.findElement(By.id("edit-submit")).click();
+												
+												//Thread.sleep(500);
+												
+												driver.switchTo().alert().accept();
+												
+												Thread.sleep(200);
+												
+												driver.switchTo().alert().accept();
+												
+												Thread.sleep(500);	
 											}else if((String.valueOf((int)_11a)).equals("3"))
 											{
 												
