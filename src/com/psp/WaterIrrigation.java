@@ -187,6 +187,9 @@ public class WaterIrrigation {
 								if(srn == sht.getLastRowNum()-1){
 									
 									//lblSrn.setText("Village Done");
+									
+									driver.quit();
+									
 									JOptionPane.showMessageDialog(null, "Village done");
 									
 								}
