@@ -27,7 +27,7 @@ public class WaterIrrigation {
 	public WebDriverWait wait;
 	public int srn;
 	public URL ico = WaterIrrigation.class.getResource("/resources/logo.png");
-public String nashikId = "S15U516U06", ahmadId = "S15U522U07";
+	public String nashikId = "S15U516U06", ahmadId = "S15U522U07";
 	
 	public void GetData()
 	{
