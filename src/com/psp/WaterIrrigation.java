@@ -3157,11 +3157,12 @@ public class WaterIrrigation {
 												/* Submit Form */
 												driver.findElement(By.id("edit-submit")).click();
 												
-												/* Accept Alert */
+												/* Form Accept Alert */
 												driver.switchTo().alert().accept();
-												
+										
 												Thread.sleep(100);
 												
+												/* GWS Accept  Alert */
 												driver.switchTo().alert().accept();
 												
 												Thread.sleep(200);
