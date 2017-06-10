@@ -724,8 +724,9 @@ public class WaterIrrigation {
 												
 												Thread.sleep(200);
 											
-											}else if((String.valueOf((int)_11a)).equals("3"))
-{
+											}
+											else if((String.valueOf((int)_11a)).equals("3"))
+											{
 												
 												/* 11a Select */
 												WebElement elm11a = driver.findElement(By.id("edit-field-gw-11-a-und"));
