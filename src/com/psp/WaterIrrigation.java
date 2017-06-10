@@ -352,7 +352,7 @@ public class WaterIrrigation {
 												slt11a.selectByIndex((int)_11a);
 												
 												/* Select 14 Water Distribution */
-												double _14 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												double _14 = sht.getRow(srn).getCell(18).getNumericCellValue();
 												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
 												Select slt14 = new Select(elm14);
 												slt14.selectByIndex((int)_14);
@@ -539,7 +539,7 @@ public class WaterIrrigation {
 												slt11a.selectByIndex((int)_11a);
 												
 												/* Select 14 Water Distribution */
-												double _14 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												double _14 = sht.getRow(srn).getCell(18).getNumericCellValue();
 												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
 												Select slt14 = new Select(elm14);
 												slt14.selectByIndex((int)_14);
@@ -843,7 +843,7 @@ public class WaterIrrigation {
 												slt11a.selectByIndex((int)_11a);
 												
 												/* Select 14 Water Distribution */
-												double _14 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												double _14 = sht.getRow(srn).getCell(18).getNumericCellValue();
 												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
 												Select slt14 = new Select(elm14);
 												slt14.selectByIndex((int)_14);
@@ -1030,7 +1030,7 @@ public class WaterIrrigation {
 												slt11a.selectByIndex((int)_11a);
 												
 												/* Select 14 Water Distribution */
-												double _14 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												double _14 = sht.getRow(srn).getCell(18).getNumericCellValue();
 												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
 												Select slt14 = new Select(elm14);
 												slt14.selectByIndex((int)_14);
@@ -1330,7 +1330,7 @@ public class WaterIrrigation {
 												slt11a.selectByIndex((int)_11a);
 												
 												/* Select 14 Water Distribution */
-												double _14 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												double _14 = sht.getRow(srn).getCell(18).getNumericCellValue();
 												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
 												Select slt14 = new Select(elm14);
 												slt14.selectByIndex((int)_14);
@@ -1517,7 +1517,7 @@ public class WaterIrrigation {
 												slt11a.selectByIndex((int)_11a);
 												
 												/* Select 14 Water Distribution */
-												double _14 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												double _14 = sht.getRow(srn).getCell(18).getNumericCellValue();
 												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
 												Select slt14 = new Select(elm14);
 												slt14.selectByIndex((int)_14);
@@ -1819,7 +1819,7 @@ public class WaterIrrigation {
 												slt11a.selectByIndex((int)_11a);
 												
 												/* Select 14 Water Distribution */
-												double _14 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												double _14 = sht.getRow(srn).getCell(18).getNumericCellValue();
 												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
 												Select slt14 = new Select(elm14);
 												slt14.selectByIndex((int)_14);
@@ -2006,7 +2006,7 @@ public class WaterIrrigation {
 												slt11a.selectByIndex((int)_11a);
 												
 												/* Select 14 Water Distribution */
-												double _14 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												double _14 = sht.getRow(srn).getCell(18).getNumericCellValue();
 												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
 												Select slt14 = new Select(elm14);
 												slt14.selectByIndex((int)_14);
@@ -2309,7 +2309,7 @@ public class WaterIrrigation {
 												slt11a.selectByIndex((int)_11a);
 												
 												/* Select 14 Water Distribution */
-												double _14 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												double _14 = sht.getRow(srn).getCell(18).getNumericCellValue();
 												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
 												Select slt14 = new Select(elm14);
 												slt14.selectByIndex((int)_14);
@@ -2496,7 +2496,7 @@ public class WaterIrrigation {
 												slt11a.selectByIndex((int)_11a);
 												
 												/* Select 14 Water Distribution */
-												double _14 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												double _14 = sht.getRow(srn).getCell(18).getNumericCellValue();
 												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
 												Select slt14 = new Select(elm14);
 												slt14.selectByIndex((int)_14);
@@ -2799,7 +2799,7 @@ public class WaterIrrigation {
 												slt11a.selectByIndex((int)_11a);
 												
 												/* Select 14 Water Distribution */
-												double _14 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												double _14 = sht.getRow(srn).getCell(18).getNumericCellValue();
 												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
 												Select slt14 = new Select(elm14);
 												slt14.selectByIndex((int)_14);
@@ -2985,8 +2985,10 @@ public class WaterIrrigation {
 												Select slt11a = new Select(elm11a);
 												slt11a.selectByIndex((int)_11a);
 												
+												/* 11b */
+												
 												/* Select 14 Water Distribution */
-												double _14 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												double _14 = sht.getRow(srn).getCell(18).getNumericCellValue();
 												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
 												Select slt14 = new Select(elm14);
 												slt14.selectByIndex((int)_14);
@@ -3170,6 +3172,81 @@ public class WaterIrrigation {
 											}else if((String.valueOf((int)_11a)).equals("3"))
 											{
 												
+												/* 11a Select */
+												WebElement elm11a = driver.findElement(By.id("edit-field-gw-11-a-und"));
+												Select slt11a = new Select(elm11a);
+												slt11a.selectByIndex((int)_11a);
+												
+												/* 11b */
+												
+												/* 13 */
+												String _13 = sht.getRow(srn).getCell(18).getStringCellValue();
+												WebElement elm13 = driver.findElement(By.id("edit-field-gw-13-reason-permanently-und"));
+												Select slt13 = new Select(elm13);
+												slt13.selectByValue(_13);
+												
+												/* Select 14 Water Distribution */
+												double _14 = sht.getRow(srn).getCell(18).getNumericCellValue();
+												WebElement elm14 = driver.findElement(By.id("edit-field-gw-14-water-distribution-und"));
+												Select slt14 = new Select(elm14);
+												slt14.selectByIndex((int)_14);
+												
+												
+												double _20 = sht.getRow(srn).getCell(27).getNumericCellValue();
+												driver.findElement(By.id("edit-field-gw-20-culturable-command-und-0-value")).sendKeys(Double.toString(_20));
+												
+												double _21 = sht.getRow(srn).getCell(28).getNumericCellValue();
+												WebElement elm21 = driver.findElement(By.id("edit-field-gw-21-major-medium-scheme-und"));
+												Select slt21 = new Select(elm21);
+												slt21.selectByIndex((int)_21);
+												
+																							
+												if((int)_21 == 2){
+													
+													String _22 = sht.getRow(srn).getCell(29).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-22-kharif-und-0-value")).sendKeys(_22);
+													
+													String _23 = sht.getRow(srn).getCell(30).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-23-rabi-und-0-value")).sendKeys(_23);
+													
+													String _24 = sht.getRow(srn).getCell(31).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-24-perennial-und-0-value")).sendKeys(_24);
+													
+													String _25 = sht.getRow(srn).getCell(32).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-25-other-und-0-value")).sendKeys(_25);
+													
+													String _26 = sht.getRow(srn).getCell(33).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-26-total-und-0-value")).sendKeys(_26);
+													
+													String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
+													if(_32.equals("Y")){
+														_32 = "1";
+													}
+													else if(_32.equals("N")){
+														_32 = "2";
+														
+														/* 33 */
+														String _33 = sht.getRow(srn).getCell(40).getStringCellValue();
+														driver.findElement(By.id("edit-field-gw-33-maximum-potential-und-0-value")).sendKeys(_33);
+													}
+													
+												}												
+																								
+												/* Remarks */
+												driver.findElement(By.id("edit-field-gw-remarks-und-0-value")).sendKeys("NIL");
+												
+												/* Submit Form */
+												driver.findElement(By.id("edit-submit")).click();
+												
+												/* Form Accept Alert */
+												driver.switchTo().alert().accept();
+										
+												Thread.sleep(100);
+												
+												/* GWS Accept  Alert */
+												driver.switchTo().alert().accept();
+												
+												Thread.sleep(200);
 											}
 										}
 										
