@@ -651,63 +651,63 @@ public class WaterIrrigation {
 													driver.findElement(By.id("edit-field-gw-38-total-und-0-value")).sendKeys(_38);
 												}
 												
-												else if((int)_21 == 1){
-												
-												String _27 = sht.getRow(srn).getCell(34).getStringCellValue();
-												driver.findElement(By.id("edit-field-gw-27-kharif-und-0-value")).sendKeys(_27);
+													else if((int)_21 == 1){
 													
-												String _28 = sht.getRow(srn).getCell(35).getStringCellValue();
-												driver.findElement(By.id("edit-field-gw-28-rabi-und-0-value")).sendKeys(_28);
-												
-												String _29 = sht.getRow(srn).getCell(36).getStringCellValue();
-												driver.findElement(By.id("edit-field-gw-29-perennial-und-0-value")).sendKeys(_29);
-												
-												String _30 = sht.getRow(srn).getCell(37).getStringCellValue();
-												driver.findElement(By.id("edit-field-gw-30-other-und-0-value")).sendKeys(_30);
-												
-												String _31 = sht.getRow(srn).getCell(38).getStringCellValue();
-												driver.findElement(By.id("edit-field-gw-31-total-und-0-value")).sendKeys(_31);
-												
-												String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
-												if(_32.equals("Y")){
-													_32 = "1";
-													
-													/* 32 */
-													WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
-													Select slt32 = new Select(elm32);
-													slt32.selectByValue(_32);
-													
-													/* _39i */												
-													WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
-													Select slt39i = new Select(elm39i);
-													slt39i.selectByValue("1");
+													String _27 = sht.getRow(srn).getCell(34).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-27-kharif-und-0-value")).sendKeys(_27);
 														
-												}
-												else if(_32.equals("N")){
-													_32 = "2";
+													String _28 = sht.getRow(srn).getCell(35).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-28-rabi-und-0-value")).sendKeys(_28);
 													
-													/* 32 */
-													WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
-													Select slt32 = new Select(elm32);
-													slt32.selectByValue(_32);
+													String _29 = sht.getRow(srn).getCell(36).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-29-perennial-und-0-value")).sendKeys(_29);
 													
-													/* 33 */
-													String _33 = sht.getRow(srn).getCell(40).getStringCellValue();
-													driver.findElement(By.id("edit-field-gw-33-maximum-potential-und-0-value")).sendKeys(_33);
+													String _30 = sht.getRow(srn).getCell(37).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-30-other-und-0-value")).sendKeys(_30);
 													
-													/* 39i */
-													WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
-													Select slt39i = new Select(elm39i);
-													slt39i.selectByValue("1");
+													String _31 = sht.getRow(srn).getCell(38).getStringCellValue();
+													driver.findElement(By.id("edit-field-gw-31-total-und-0-value")).sendKeys(_31);
 													
-													/* 39ii */
-													WebElement elm39ii = driver.findElement(By.id("edit-field-gw-reason-under-utilizatio-und"));
-													Select slt39ii = new Select(elm39ii);
-													slt39ii.selectByValue("5");
-												}										
-												
-												
-												}												
+													String _32 = sht.getRow(srn).getCell(39).getStringCellValue();
+													if(_32.equals("Y")){
+														_32 = "1";
+														
+														/* 32 */
+														WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+														Select slt32 = new Select(elm32);
+														slt32.selectByValue(_32);
+														
+														/* _39i */												
+														WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
+														Select slt39i = new Select(elm39i);
+														slt39i.selectByValue("1");
+															
+													}
+														else if(_32.equals("N")){
+															_32 = "2";
+															
+															/* 32 */
+															WebElement elm32 = driver.findElement(By.id("edit-field-gw-fuctioning-commisioning-und"));
+															Select slt32 = new Select(elm32);
+															slt32.selectByValue(_32);
+															
+															/* 33 */
+															String _33 = sht.getRow(srn).getCell(40).getStringCellValue();
+															driver.findElement(By.id("edit-field-gw-33-maximum-potential-und-0-value")).sendKeys(_33);
+															
+															/* 39i */
+															WebElement elm39i = driver.findElement(By.id("edit-field-gw-utilization-schemes-und"));
+															Select slt39i = new Select(elm39i);
+															slt39i.selectByValue("1");
+															
+															/* 39ii */
+															WebElement elm39ii = driver.findElement(By.id("edit-field-gw-reason-under-utilizatio-und"));
+															Select slt39ii = new Select(elm39ii);
+															slt39ii.selectByValue("5");
+														}										
+													
+													
+													}												
 																								
 												/* Remarks */
 												driver.findElement(By.id("edit-field-gw-remarks-und-0-value")).sendKeys("NIL");
